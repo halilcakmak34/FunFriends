@@ -1,3 +1,4 @@
+<?php 
 class Users_model extends CI_Model {
 	 
 	/**
@@ -46,3 +47,4 @@ class Users_model extends CI_Model {
 
       }//End of getUsers Function
  }
+ ?>
