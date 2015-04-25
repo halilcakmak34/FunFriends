@@ -1,14 +1,15 @@
-<!DOCTYPE html>
+<?php
+defined('BASEPATH') OR exit('No direct script access allowed');
+?><!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>Welcome to CodeIgniter Demo site</title>
+	<title>Welcome to CodeIgniter</title>
 
 	<style type="text/css">
 
-	::selection{ background-color: #E13300; color: white; }
-	::moz-selection{ background-color: #E13300; color: white; }
-	::webkit-selection{ background-color: #E13300; color: white; }
+	::selection { background-color: #E13300; color: white; }
+	::-moz-selection { background-color: #E13300; color: white; }
 
 	body {
 		background-color: #fff;
@@ -44,11 +45,11 @@
 		padding: 12px 10px 12px 10px;
 	}
 
-	#body{
+	#body {
 		margin: 0 15px 0 15px;
 	}
-	
-	p.footer{
+
+	p.footer {
 		text-align: right;
 		font-size: 11px;
 		border-top: 1px solid #D0D0D0;
@@ -56,55 +57,32 @@
 		padding: 0 10px 0 10px;
 		margin: 20px 0 0 0;
 	}
-	
-	#container{
+
+	#container {
 		margin: 10px;
 		border: 1px solid #D0D0D0;
-		-webkit-box-shadow: 0 0 8px #D0D0D0;
+		box-shadow: 0 0 8px #D0D0D0;
 	}
 	</style>
 </head>
 <body>
 
 <div id="container">
-	<h1>Welcome to CodeIgniter Chat section</h1>
+	<h1>Welcome to CodeIgniter!</h1>
 
 	<div id="body">
 		<p>The page you are looking at is being generated dynamically by CodeIgniter.</p>
 
-		<p>If you would like to implement chat process,you can use following credintial to login.Use to different web browsers to how to working it. </p>
-		
-        <table width="500" border="1" cellspacing="1" cellpadding="1">
-  <tr>
-    <th scope="col">User name</th>
-    <th scope="col">Password</th>
-  </tr>
-  <tr>
-    <td>Smith</td>
-    <td>12345</td>
-  </tr>
-  <tr>
-    <td>Ann</td>
-    <td>11111</td>
-  </tr>
-  <tr>
-    <td>Chris</td>
-    <td>demo</td>
-  </tr>
-</table>
+		<p>If you would like to edit this page you'll find it located at:</p>
+		<code>application/views/welcome_message.php</code>
 
-     <br/>
-<br/>
+		<p>The corresponding controller for this page is found at:</p>
+		<code>application/controllers/Welcome.php</code>
 
-<a href="http://localhost/CodeIgniter/index.php/users">Users Login</a><br/>
-
-        
-        
-
-		<p><a href="http://webexplorar.com/codeigniter-chat-example/">Back to the CodeIgniter chat example Tutorial</a>.</p>
+		<p>If you are exploring CodeIgniter for the very first time, you should start by reading the <a href="user_guide/">User Guide</a>.</p>
 	</div>
 
-	<p class="footer">Page rendered in <strong>{elapsed_time}</strong> seconds</p>
+	<p class="footer">Page rendered in <strong>{elapsed_time}</strong> seconds. <?php echo  (ENVIRONMENT === 'development') ?  'CodeIgniter Version <strong>' . CI_VERSION . '</strong>' : '' ?></p>
 </div>
 
 </body>
